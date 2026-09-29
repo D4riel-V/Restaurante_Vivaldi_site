@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurante Vivaldi — Comida italiana gourmet</title>
+<meta name="description" content="Restaurante Vivaldi: comida italiana gourmet con pasta hecha a mano, aceites de prensa fría y una cava de 140 etiquetas. Reserva tu mesa en línea.">
+<meta name="theme-color" content="#1C3A2C">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Restaurante Vivaldi — Comida italiana gourmet">
+<meta property="og:description" content="Pasta hecha a mano, cocina de temporada y una cava de 140 etiquetas.">
+<meta property="og:image" content="img/logo.png"> <!-- EDITAR: al publicar, usa la URL completa -->
+<meta property="og:locale" content="es_ES">
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurante Vivaldi",
+  "image": "img/logo.png",
+  "servesCuisine": "Italiana",
+  "priceRange": "$$"
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="kicker">Trattoria e cucina d'autore — desde 1996</p>
+        <h1>Restaurante<br><em>Vivaldi</em></h1>
+        <p class="hero-lead">
+          Una mesa donde la tradición italiana se reinterpreta con precisión de autor:
+          pastas hechas a mano, aceites de prensa fría y una carta de vinos que
+          recorre la Toscana y el Piamonte.
+        </p>
+        <div class="hero-actions">
+          <a href="reservar.html" class="btn btn-solid">Reservar una mesa</a>
+          <a href="menu.html" class="btn btn-ghost">Ver el menú</a>
+        </div>
+      </div>
+
+      <!-- Solo decorativo: el logo de la marca ya aparece una vez, en el encabezado. -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 480" class="olive-art">
+          <circle cx="210" cy="240" r="190" class="ring"></circle>
+          <path class="branch" d="M120 380 C 160 300, 150 200, 210 100 C 250 40, 300 20, 330 30"/>
+          <ellipse class="leaf" cx="170" cy="300" rx="22" ry="10" transform="rotate(-35 170 300)"/>
+          <ellipse class="leaf" cx="195" cy="255" rx="22" ry="10" transform="rotate(-20 195 255)"/>
+          <ellipse class="leaf" cx="210" cy="205" rx="22" ry="10" transform="rotate(-8 210 205)"/>
+          <ellipse class="leaf" cx="235" cy="150" rx="22" ry="10" transform="rotate(10 235 150)"/>
+          <ellipse class="leaf" cx="270" cy="95" rx="22" ry="10" transform="rotate(28 270 95)"/>
+          <circle class="olive" cx="150" cy="330" r="9"/>
+          <circle class="olive" cx="180" cy="270" r="9"/>
+          <circle class="olive" cx="260" cy="130" r="9"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIOS / UBICACIÓN (EDITAR con los datos reales) -->
+  <section class="info-strip" aria-label="Horarios y ubicación">
+    <div class="wrap info-inner">
+      <div class="info-item">
+        <span class="info-label">Horarios</span>
+        <p>Martes a domingo: 12:00 a 15:00 y 18:30 a 22:30</p>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Ubicación</span>
+        <p>Calle y número, Ciudad</p>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Reservaciones</span>
+        <p>Desde <a href="reservar.html">esta web</a> o por WhatsApp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LA CASA / HISTORIA -->
+  <section class="intro" id="historia">
+    <div class="wrap intro-inner">
+      <blockquote class="pull-quote">
+        "En Vivaldi no seguimos recetas: interpretamos una partitura que cada
+        temporada se vuelve a escribir con el mercado del día."
+        <cite>— Chef Alessio Marino, cocina</cite>
+      </blockquote>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat-number" data-years-since="1996">30</span>
+          <span class="stat-label">años de historia</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">pasta hecha a mano</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">140</span>
+          <span class="stat-label">etiquetas en la cava</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.9</span>
+          <span class="stat-label">calificación de huéspedes</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>

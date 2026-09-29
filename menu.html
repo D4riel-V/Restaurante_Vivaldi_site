@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú — Restaurante Vivaldi</title>
+<meta name="description" content="La carta de Restaurante Vivaldi: antipasti, primi, secondi y dolci, con vinos italianos por copa.">
+<meta name="theme-color" content="#1C3A2C">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>El menú</h2>
+        <p>Una carta breve y cambiante, fiel a la temporada y al mercado.</p>
+        <ul class="menu-legend" aria-label="Leyenda de etiquetas">
+          <li><span class="tag" aria-hidden="true">V</span> Vegetariano</li>
+          <li><span class="tag" aria-hidden="true">SG</span> Sin gluten</li>
+        </ul>
+        <p class="menu-note">Si tienes alergias o restricciones, avísanos al reservar.</p>
+        <!-- Cuando tengas la carta en PDF, descomenta:
+        <a class="btn btn-ghost" href="docs/carta-vivaldi.pdf" download>Descargar la carta (PDF)</a> -->
+      </div>
+
+      <div class="menu-grid">
+
+        <div class="menu-category">
+          <h3>Antipasti</h3>
+          <ul class="menu-list">
+            <li><span class="dish">Burrata pugliese, tomate confitado y albahaca <span class="tag" title="Vegetariano" role="img" aria-label="Vegetariano">V</span><span class="tag" title="Sin gluten" role="img" aria-label="Sin gluten">SG</span></span><span class="dots"></span><span class="price">$9.50</span></li>
+            <li><span class="dish">Carpaccio de res, alcaparras y parmesano 24 meses <span class="tag" title="Sin gluten" role="img" aria-label="Sin gluten">SG</span></span><span class="dots"></span><span class="price">$12.00</span></li>
+            <li><span class="dish">Vitello tonnato clásico <span class="tag" title="Sin gluten" role="img" aria-label="Sin gluten">SG</span></span><span class="dots"></span><span class="price">$11.50</span></li>
+            <li><span class="dish">Tabla de embutidos y quesos de la casa</span><span class="dots"></span><span class="price">$16.00</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3>Primi</h3>
+          <ul class="menu-list">
+            <li><span class="dish">Tagliatelle al ragù bolognese, 8 horas de cocción</span><span class="dots"></span><span class="price">$14.00</span></li>
+            <li><span class="dish">Risotto de azafrán y médula</span><span class="dots"></span><span class="price">$15.50</span></li>
+            <li><span class="dish">Ravioli de ricotta, mantequilla y salvia <span class="tag" title="Vegetariano" role="img" aria-label="Vegetariano">V</span></span><span class="dots"></span><span class="price">$13.50</span></li>
+            <li><span class="dish">Spaghetti allo scoglio, mariscos del día</span><span class="dots"></span><span class="price">$18.00</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3>Secondi</h3>
+          <ul class="menu-list">
+            <li><span class="dish">Osobuco de ternera y risotto milanese</span><span class="dots"></span><span class="price">$24.00</span></li>
+            <li><span class="dish">Branzino entero, hinojo y cítricos <span class="tag" title="Sin gluten" role="img" aria-label="Sin gluten">SG</span></span><span class="dots"></span><span class="price">$26.00</span></li>
+            <li><span class="dish">Costilla braseada al Barolo</span><span class="dots"></span><span class="price">$28.00</span></li>
+            <li><span class="dish">Pollo al mattone, hierbas del jardín</span><span class="dots"></span><span class="price">$19.50</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-category">
+          <h3>Dolci &amp; Vini</h3>
+          <ul class="menu-list">
+            <li><span class="dish">Tiramisú clásico, cacao amargo <span class="tag" title="Vegetariano" role="img" aria-label="Vegetariano">V</span></span><span class="dots"></span><span class="price">$7.50</span></li>
+            <li><span class="dish">Panna cotta de vainilla y frutos rojos <span class="tag" title="Vegetariano" role="img" aria-label="Vegetariano">V</span><span class="tag" title="Sin gluten" role="img" aria-label="Sin gluten">SG</span></span><span class="dots"></span><span class="price">$7.00</span></li>
+            <li><span class="dish">Copa de Barolo DOCG</span><span class="dots"></span><span class="price">$14.00</span></li>
+            <li><span class="dish">Copa de Prosecco Superiore</span><span class="dots"></span><span class="price">$9.00</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>

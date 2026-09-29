@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reservar mesa — Restaurante Vivaldi</title>
+<meta name="description" content="Reserva tu mesa en Restaurante Vivaldi en menos de un minuto: elige fecha, hora y número de personas.">
+<meta name="theme-color" content="#1C3A2C">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+  <section class="reserve-page" id="reservar">
+    <div class="wrap">
+
+      <div class="reserve-head">
+        <p class="kicker">Reserva tu mesa</p>
+        <h1>Resérvala en menos de un minuto</h1>
+        <p>Elige la fecha, la hora y cuéntanos cuántos son. Tu reserva se
+          enviará directo a nuestro sistema y te confirmaremos por teléfono.</p>
+      </div>
+
+      <!-- Indicador de progreso: solo visual, lo controla js/reservar.js -->
+      <ol class="wizard-progress" aria-hidden="true">
+        <li class="is-active" data-step-dot="1"><span>1</span>Fecha</li>
+        <li data-step-dot="2"><span>2</span>Hora</li>
+        <li data-step-dot="3"><span>3</span>Tus datos</li>
+        <li data-step-dot="4"><span>4</span>Confirmar</li>
+      </ol>
+
+      <form class="wizard" id="reserveWizard" novalidate>
+        <div class="wizard-viewport">
+          <div class="wizard-track" id="wizardTrack">
+
+            <!-- Paso 1: fecha -->
+            <fieldset class="wizard-step" data-step="1">
+              <legend>¿Qué día quieres venir?</legend>
+              <label class="field">
+                <span>Fecha</span>
+                <input type="date" name="fecha" required>
+              </label>
+              <p class="wizard-hint" id="fechaHint" aria-live="polite"></p>
+            </fieldset>
+
+            <!-- Paso 2: hora -->
+            <fieldset class="wizard-step" data-step="2">
+              <legend>¿A qué hora?</legend>
+              <div class="time-grid" id="timeGrid" role="group" aria-label="Hora de la reserva">
+                <p class="time-group-label">Almuerzo</p>
+                <label class="time-chip"><input type="radio" name="hora" value="12:00" required><span>12:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="12:30"><span>12:30</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="13:00"><span>13:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="13:30"><span>13:30</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="14:00"><span>14:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="14:30"><span>14:30</span></label>
+                <p class="time-group-label">Cena</p>
+                <label class="time-chip"><input type="radio" name="hora" value="18:30"><span>18:30</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="19:00"><span>19:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="19:30"><span>19:30</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="20:00"><span>20:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="20:30"><span>20:30</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="21:00"><span>21:00</span></label>
+                <label class="time-chip"><input type="radio" name="hora" value="21:30"><span>21:30</span></label>
+              </div>
+              <p class="wizard-hint" id="horaHint" aria-live="polite"></p>
+            </fieldset>
+
+            <!-- Paso 3: datos -->
+            <fieldset class="wizard-step" data-step="3">
+              <legend>Tus datos</legend>
+              <label class="field">
+                <span>Nombre</span>
+                <input type="text" name="nombre" autocomplete="given-name" required maxlength="50">
+              </label>
+              <label class="field">
+                <span>Apellido</span>
+                <input type="text" name="apellido" autocomplete="family-name" required maxlength="50">
+              </label>
+              <label class="field">
+                <span>Teléfono</span>
+                <input type="tel" name="telefono" autocomplete="tel" required maxlength="15" placeholder="Con código de país si aplica">
+              </label>
+              <label class="field">
+                <span>Personas</span>
+                <select name="personas" required>
+                  <option value="1">1 persona</option>
+                  <option value="2" selected>2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5">5 personas</option>
+                  <option value="6">6 personas</option>
+                  <option value="7">7 personas</option>
+                  <option value="8">8 personas</option>
+                  <option value="9">9 personas</option>
+                  <option value="10">10 personas</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Notas (opcional)</span>
+                <textarea name="notas" rows="3" maxlength="300" placeholder="Alergias, celebración, mesa junto a la ventana..."></textarea>
+              </label>
+              <!-- Campo trampa anti-spam: invisible para personas, los bots suelen rellenarlo -->
+              <label class="field" style="position:absolute;left:-9999px" aria-hidden="true">
+                <span>Sitio web (déjalo vacío)</span>
+                <input type="text" name="sitio_web" tabindex="-1" autocomplete="off">
+              </label>
+            </fieldset>
+
+            <!-- Paso 4: confirmar -->
+            <fieldset class="wizard-step" data-step="4">
+              <legend>Confirma tu reserva</legend>
+              <dl class="summary" id="reserveSummary"><!-- lo llena js/reservar.js --></dl>
+              <p class="wizard-hint" style="color:var(--muted)">Al confirmar, tu reserva se enviará directo a nuestro sistema y el equipo la revisará.</p>
+            </fieldset>
+
+          </div>
+        </div>
+
+        <div class="wizard-nav">
+          <button type="button" class="btn btn-line" id="wizardBack" disabled>Atrás</button>
+          <button type="button" class="btn btn-solid" id="wizardNext">Siguiente</button>
+          <button type="submit" class="btn btn-gold" id="wizardSubmit" hidden>Enviar reserva</button>
+        </div>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="reserve-contact-note">
+        Para grupos de más de 10 personas, escríbenos directamente.
+        <a href="#" data-whatsapp hidden target="_blank" rel="noopener">Abrir WhatsApp</a>
+      </p>
+
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>
