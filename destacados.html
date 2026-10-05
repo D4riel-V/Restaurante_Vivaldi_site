@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platillos destacados — Restaurante Vivaldi</title>
+<meta name="description" content="Las creaciones por las que se conoce a Vivaldi: tagliatelle al ragù, branzino entero y tiramisú de la casa.">
+<meta name="theme-color" content="#1C3A2C">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+  <!-- Fotos: img/tagliatelle.jpg, branzino.jpg y tiramisu.jpg (puedes cambiar el src).
+       Mientras una foto no exista, se muestra la ilustración de respaldo. -->
+  <section class="featured" id="destacados">
+    <div class="wrap">
+      <div class="section-head section-head--light">
+        <h2>Platillos destacados</h2>
+        <p>Las creaciones por las que se conoce a Vivaldi.</p>
+      </div>
+
+      <div class="featured-grid">
+
+        <article class="feature-card feature-card--signature">
+          <div class="feature-media" data-photo-host>
+            <img data-photo src="img/tagliatelle.jpg" alt="Tagliatelle al ragù bolognese servidas en plato hondo" width="738" height="414">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="88" class="plate-ring"/>
+              <path class="pasta" d="M55 120 C 75 90, 65 70, 85 60 C 105 50, 100 80, 120 85 C 140 90, 135 60, 150 55"/>
+              <circle class="crumb" cx="70" cy="70" r="3"/>
+              <circle class="crumb" cx="130" cy="115" r="3"/>
+              <circle class="crumb" cx="110" cy="130" r="3"/>
+            </svg>
+          </div>
+          <div class="feature-copy">
+            <p class="feature-tag">Signature</p>
+            <h3>Tagliatelle al ragù bolognese</h3>
+            <p>Nuestra receta insignia: pasta laminada a mano cada mañana y un ragù
+              que se cocina lentamente durante ocho horas con tres cortes de res
+              y vino tinto de Emilia-Romaña.</p>
+            <span class="feature-price">$14.00</span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-media" data-photo-host>
+            <img data-photo src="img/branzino.jpg" alt="Branzino entero al horno con hinojo y limón" width="678" height="452">
+            <svg viewBox="0 0 160 160" aria-hidden="true">
+              <circle cx="80" cy="80" r="66" class="plate-ring"/>
+              <path class="fish" d="M45 80 C 60 60, 100 60, 115 80 C 100 100, 60 100, 45 80 Z"/>
+              <path class="fish-tail" d="M115 80 L 132 68 L 132 92 Z"/>
+            </svg>
+          </div>
+          <div class="feature-copy">
+            <h3>Branzino entero al horno</h3>
+            <p>Lubina mediterránea entera con hinojo, limón y aceite de oliva
+              virgen extra de la casa.</p>
+            <span class="feature-price">$26.00</span>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-media" data-photo-host>
+            <img data-photo src="img/tiramisu.jpg" alt="Tiramisú de la casa espolvoreado con cacao" width="678" height="452">
+            <svg viewBox="0 0 160 160" aria-hidden="true">
+              <circle cx="80" cy="80" r="66" class="plate-ring"/>
+              <rect x="55" y="55" width="50" height="50" rx="4" class="tira"/>
+              <line x1="55" y1="68" x2="105" y2="68" class="tira-line"/>
+              <line x1="55" y1="82" x2="105" y2="82" class="tira-line"/>
+              <line x1="55" y1="96" x2="105" y2="96" class="tira-line"/>
+            </svg>
+          </div>
+          <div class="feature-copy">
+            <h3>Tiramisú de la casa</h3>
+            <p>Receta de familia: mascarpone, café espresso recién extraído y
+              cacao amargo de Módica.</p>
+            <span class="feature-price">$7.50</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>

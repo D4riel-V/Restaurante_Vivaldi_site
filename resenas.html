@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas — Restaurante Vivaldi</title>
+<meta name="description" content="Lo que dicen nuestros huéspedes de Restaurante Vivaldi: sabor, servicio, ambiente y cava de vinos.">
+<meta name="theme-color" content="#1C3A2C">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+
+  <!-- AMBIENTE (galería)
+       Se oculta sola hasta que agregues al menos una foto en img/.
+       Si una foto no existe, su recuadro desaparece. -->
+  <section class="gallery" id="ambiente" hidden>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>El ambiente</h2>
+        <p>Un salón cálido pensado para cenas largas.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <figure data-photo-host data-photo-optional>
+          <img data-photo src="img/ambiente-1.webp" alt="El salón principal del restaurante" width="800" height="600">
+          <figcaption>La sala</figcaption>
+        </figure>
+        <figure data-photo-host data-photo-optional>
+          <img data-photo src="img/ambiente-2.webp" alt="La cava de vinos" width="800" height="600">
+          <figcaption>La cava</figcaption>
+        </figure>
+        <figure data-photo-host data-photo-optional>
+          <img data-photo src="img/ambiente-3.webp" alt="La cocina y el trabajo del chef" width="800" height="600">
+          <figcaption>La cocina</figcaption>
+        </figure>
+        <figure data-photo-host data-photo-optional>
+          <img data-photo src="img/ambiente-4.webp" alt="Detalle de una mesa servida" width="800" height="600">
+          <figcaption>La mesa</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEÑAS (ejemplos: reemplázalas por reseñas reales al publicar) -->
+  <section class="reviews" id="resenas">
+    <div class="wrap reviews-inner">
+
+      <div class="rating-summary">
+        <span class="rating-number">4.9</span>
+        <div class="stars" role="img" aria-label="4.9 de 5 estrellas">★★★★★</div>
+        <p class="rating-count">312 reseñas verificadas</p>
+        <ul class="rating-bars">
+          <li><span>Sabor</span><i style="--v:98%" role="img" aria-label="98 de 100"></i></li>
+          <li><span>Servicio</span><i style="--v:96%" role="img" aria-label="96 de 100"></i></li>
+          <li><span>Ambiente</span><i style="--v:94%" role="img" aria-label="94 de 100"></i></li>
+          <li><span>Cava de vinos</span><i style="--v:92%" role="img" aria-label="92 de 100"></i></li>
+        </ul>
+      </div>
+
+      <div class="review-list">
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>El ragù de las tagliatelle merece el viaje por sí solo.
+            El servicio conoce cada plato de la carta y lo explica sin
+            solemnidad.</blockquote>
+          <figcaption>Marcela H. — cena de aniversario</figcaption>
+        </figure>
+
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>Reservamos para ocho personas y cada plato llegó a
+            tiempo y en su punto. La carta de vinos es honesta, no solo
+            cara.</blockquote>
+          <figcaption>Roberto A. — cena de negocios</figcaption>
+        </figure>
+
+        <figure class="review">
+          <div class="stars" role="img" aria-label="4 de 5 estrellas">★★★★☆</div>
+          <blockquote>El branzino es excepcional. La única espera fue por
+            una mesa junto a la ventana, que valió la pena.</blockquote>
+          <figcaption>Daniela P.</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>
