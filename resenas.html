@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas — Restaurante Vivaldi</title>
+<meta name="description" content="Lo que dicen nuestros huéspedes de Restaurante Vivaldi: sabor, servicio, ambiente y cava de vinos.">
+<meta name="theme-color" content="#1C3A2C">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/resenas.css">
+</head>
+<body id="reviewsPage">
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+
+  <!-- ENCABEZADO con foto y calificación grande
+       (EDITAR: 4.9 y 312 son ejemplos; deben ser reales antes de publicar) -->
+  <header class="r-hero">
+    <!-- FOTO (reemplazar): img/resenas-hero.jpg — horizontal, mín. 1600×900. Una mesa compartida, brindis o gente cenando. -->
+    <div class="r-hero-media" data-photo-host>
+      <img data-photo src="img/ambiente.avif" alt="" width="1600" height="900">
+    </div>
+    <div class="wrap r-hero-inner">
+      <h1>Lo que se dice de nosotros</h1>
+      <div class="r-rating">
+        <span class="r-rating-number">4.9</span>
+        <div>
+          <div class="stars" role="img" aria-label="4.9 de 5 estrellas">★★★★★</div>
+          <p>50 reseñas verificadas</p>
+        </div>
+      </div>
+      <div class="r-hero-actions">
+        <a class="btn btn-gold" href="reservar.html">Reservar mesa</a>
+        <a class="btn btn-ghost" href="#" data-contact-href="reviewUrl" hidden target="_blank" rel="noopener">Dejar mi reseña</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PUNTAJES POR CATEGORÍA (EDITAR: ejemplos) -->
+  <section class="r-scores" aria-label="Calificación por categoría">
+    <div class="wrap r-scores-grid">
+      <div class="r-score"><b>4.9</b><span>Sabor</span><i style="--v:98%" role="img" aria-label="98 de 100"></i></div>
+      <div class="r-score"><b>4.8</b><span>Servicio</span><i style="--v:96%" role="img" aria-label="96 de 100"></i></div>
+      <div class="r-score"><b>4.7</b><span>Ambiente</span><i style="--v:94%" role="img" aria-label="94 de 100"></i></div>
+      <div class="r-score"><b>4.6</b><span>Cava de vinos</span><i style="--v:92%" role="img" aria-label="92 de 100"></i></div>
+    </div>
+  </section>
+
+  <!-- RESEÑA DESTACADA (EDITAR: reemplázala por una reseña real) -->
+  <section class="r-featured">
+    <div class="wrap">
+      <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+      <blockquote>
+        El ragù de las tagliatelle merece el viaje por sí solo. El servicio conoce cada plato de la carta y lo explica sin solemnidad.
+        <cite>Marcela H. — cena de aniversario</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- MÁS RESEÑAS (EDITAR: ejemplos; para agregar una, copia un bloque <figure class="r-card">) -->
+  <section class="r-list">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Más Opiniones</h2>
+        <p>Cenas de aniversario, de negocios y de martes cualquiera.</p>
+      </div>
+      <div class="r-grid">
+        <figure class="r-card">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>Reservamos para ocho personas y cada plato llegó a tiempo y en su punto. La carta de vinos es honesta, no solo cara.</blockquote>
+          <figcaption>
+            <span class="r-avatar" aria-hidden="true">RA</span>
+            <span><strong>Roberto A.</strong><small>Cena de negocios · grupo de 8</small></span>
+          </figcaption>
+        </figure>
+
+        <figure class="r-card">
+          <div class="stars" role="img" aria-label="4 de 5 estrellas">★★★★☆</div>
+          <blockquote>El branzino es excepcional. La única espera fue por una mesa junto a la ventana, que valió la pena.</blockquote>
+          <figcaption>
+            <span class="r-avatar" aria-hidden="true">DP</span>
+            <span><strong>Daniela P.</strong><small>Pidió el <a href="menu.html#secondi">branzino entero</a></small></span>
+          </figcaption>
+        </figure>
+
+        <!-- invitación a dejar una reseña -->
+        <div class="r-card r-card--invite">
+          <h3>¿Cenaste con nosotros?</h3>
+          <p>Cuéntanos cómo fue: leemos cada reseña.</p>
+          <a class="btn btn-solid" href="#" data-contact-href="reviewUrl" hidden target="_blank" rel="noopener">Dejar mi reseña</a>
+          <a class="btn btn-ghost" href="contacto.html">Escribirnos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="r-cta">
+    <div class="wrap">
+      <h2>Ahora te toca a ti</h2>
+      <p>Reserva tu mesa y cuéntanos cómo te fue.</p>
+      <a class="btn btn-gold" href="reservar.html">Reservar mesa</a>
+    </div>
+  </section>
+
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>

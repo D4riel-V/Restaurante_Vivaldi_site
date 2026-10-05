@@ -1,0 +1,63 @@
+/* Vivaldi — reseñas. Se carga DESPUÉS de style.css y usa sus variables. */
+
+/* ---------- encabezado ---------- */
+.r-hero{ position: relative; overflow: hidden; background: var(--forest); color: var(--ivory); padding: 5rem 0 4rem; }
+.r-hero-media{ position: absolute; inset: 0; }
+.r-hero-media img{ width: 100%; height: 100%; object-fit: cover; }
+.r-hero-media::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,38,28,.6), rgba(18,38,28,.92)); }
+.r-hero-media.no-photo{ display: none; }
+.r-hero-inner{ position: relative; z-index: 1; }
+.r-hero h1{ color: var(--paper); font-size: clamp(2.4rem, 5.6vw, 4.4rem); line-height: 1.05; max-width: 14ch; }
+.r-rating{ display: flex; align-items: center; gap: 1.2rem; margin: 1.6rem 0 2rem; }
+.r-rating-number{ font: 500 clamp(4rem, 9vw, 6rem)/1 var(--font-display); color: var(--gold-light); }
+.r-rating .stars{ margin: 0 0 .2rem; font-size: 1.3rem; }
+.r-rating p{ margin: 0; color: rgba(242,236,221,.85); }
+.r-hero-actions{ display: flex; flex-wrap: wrap; gap: .8rem; }
+.r-hero .btn-ghost{ color: var(--ivory); border-color: var(--line-on-dark); }
+.r-hero .btn-ghost:hover{ background: var(--ivory); color: var(--forest-deep); }
+
+/* ---------- puntajes ---------- */
+.r-scores{ background: var(--ivory); border-bottom: 1px solid var(--line); }
+.r-scores-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem 2.5rem; padding-top: 2rem; padding-bottom: 2rem; }
+.r-score{ display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: .1rem .7rem; }
+.r-score b{ font: 500 2rem/1 var(--font-display); color: var(--forest); }
+.r-score span{ font-size: .92rem; color: var(--muted); }
+.r-score i{ grid-column: 1 / -1; display: block; position: relative; height: 4px; margin-top: .5rem; background: var(--line); }
+.r-score i::after{ content: ""; position: absolute; inset: 0 auto 0 0; width: var(--v); background: var(--gold); }
+
+/* ---------- reseña destacada ---------- */
+.r-featured{ background: var(--forest-deep); color: var(--paper); padding: 5.5rem 0; text-align: center; }
+.r-featured .stars{ margin-bottom: 1.2rem; font-size: 1.2rem; }
+.r-featured blockquote{ margin: 0 auto; max-width: 26ch; font: italic 400 clamp(1.7rem, 3.8vw, 2.9rem)/1.3 var(--font-display); }
+.r-featured cite{ display: block; margin-top: 1.6rem; font: 400 .95rem var(--font-body); font-style: normal; color: var(--gold-light); }
+
+/* ---------- tarjetas ---------- */
+.r-list{ padding: 5.5rem 0; }
+.r-grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; }
+.r-card{ margin: 0; display: flex; flex-direction: column; padding: 1.8rem; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--gold); }
+.r-card .stars{ margin: 0 0 .8rem; }
+.r-card blockquote{ margin: 0 0 1.4rem; font: 400 1.15rem/1.5 var(--font-display); color: var(--ink); }
+.r-card figcaption{ margin-top: auto; display: flex; align-items: center; gap: .8rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+.r-card figcaption strong{ display: block; font-size: .95rem; }
+.r-card figcaption small{ display: block; font-size: .82rem; color: var(--muted); }
+.r-card figcaption a{ color: var(--wine); text-decoration: underline; }
+.r-avatar{ flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; display: grid; place-items: center; background: var(--forest); color: var(--gold-light); font: 500 .9rem var(--font-display); }
+
+.r-card--invite{ justify-content: center; align-items: flex-start; gap: .8rem; background: var(--ivory); border: 1px dashed var(--gold); border-top-width: 1px; }
+.r-card--invite h3{ font-size: 1.4rem; margin: 0; }
+.r-card--invite p{ margin: 0 0 .6rem; color: var(--muted); }
+
+/* ---------- cierre ---------- */
+.r-cta{ background: var(--forest); color: var(--ivory); padding: 5rem 0; text-align: center; }
+.r-cta h2{ color: var(--paper); font-size: clamp(2rem, 4vw, 3rem); }
+.r-cta p{ color: rgba(242,236,221,.82); margin-bottom: 1.6rem; }
+
+@media (max-width: 960px){
+  .r-scores-grid{ grid-template-columns: 1fr 1fr; }
+  .r-featured, .r-list{ padding: 4rem 0; }
+}
+@media (max-width: 600px){
+  .r-hero{ padding: 3.5rem 0 3rem; }
+  .r-card{ padding: 1.4rem; }
+  .r-cta{ padding: 3.8rem 0; }
+}

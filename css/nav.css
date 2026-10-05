@@ -1,0 +1,48 @@
+/* Vivaldi — menú móvil (refinado y sobrio). Se carga desde js/include.js, después de los demás estilos. */
+
+@media (max-width: 960px){
+
+  .main-nav{
+    padding: .4rem 2rem 1.6rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 28px -20px rgba(23,23,15,.25);
+    max-height: calc(100vh - 74px);
+    max-height: calc(100dvh - 74px);
+    overflow-y: auto;
+  }
+  .main-nav.is-open{ animation: nav-drop .25s ease both; }
+  @keyframes nav-drop{ from{ opacity: 0; transform: translateY(-6px); } to{ opacity: 1; transform: none; } }
+
+  /* enlaces más grandes y en la tipografía de la marca */
+  .main-nav a:not(.nav-cta){
+    padding: 1.05rem 0;
+    border-bottom: 1px solid var(--line);
+    font: 400 1.4rem/1.2 var(--font-display);
+    letter-spacing: -.01em;
+    color: var(--ink);
+    transition: color .2s ease, padding-left .25s ease;
+  }
+  .main-nav a:not(.nav-cta):hover,
+  .main-nav a:not(.nav-cta):focus-visible{ color: var(--forest); padding-left: .35rem; }
+
+  /* página actual: una línea dorada fina a la izquierda */
+  .main-nav a.is-active:not(.nav-cta){
+    padding-left: 1rem;
+    box-shadow: inset 2px 0 0 var(--gold);
+    color: var(--forest);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* botón de reservar: corrige el texto verde oliva sobre verde */
+  .main-nav .nav-cta,
+  .main-nav .nav-cta.is-active{
+    margin-top: 1.5rem;
+    background: var(--forest);
+    border-color: var(--forest);
+    color: var(--paper);
+    font-weight: 500;
+  }
+  .main-nav .nav-cta:hover{ background: var(--forest-deep); border-color: var(--forest-deep); }
+}

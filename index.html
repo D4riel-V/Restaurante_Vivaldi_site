@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurante Vivaldi — Comida italiana gourmet</title>
+<meta name="description" content="Restaurante Vivaldi: comida italiana gourmet con pasta hecha a mano, aceites de prensa fría y una cava de 140 etiquetas. Reserva tu mesa en línea.">
+<meta name="theme-color" content="#1C3A2C">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Restaurante Vivaldi — Comida italiana gourmet">
+<meta property="og:description" content="Pasta hecha a mano, cocina de temporada y una cava de 140 etiquetas.">
+<meta property="og:image" content="img/logo.png"> <!-- EDITAR: al publicar, usa la URL completa -->
+<meta property="og:locale" content="es_ES">
+
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/inicio.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Restaurante Vivaldi",
+  "image": "img/logo.png",
+  "servesCuisine": "Italiana",
+  "priceRange": "$$"
+}
+</script>
+</head>
+<body id="homePage">
+
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<div data-include="partials/header.html"></div>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <!-- FOTO DE FONDO (reemplazar): img/inicio-hero.jpg — horizontal, mín. 1920×1080.
+         Ideal: el plato estrella (tagliatelle) o el salón con luz cálida; lo importante queda a la derecha,
+         porque el texto va a la izquierda. Mientras no exista, se muestra el fondo verde con la rama de olivo. -->
+    <div class="hero-media" data-photo-host>
+      <img data-photo src="img/contacto-hero.jpg" alt="" width="1920" height="1080">
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="kicker">Trattoria e cucina d'autore — desde 1996</p>
+        <h1>Restaurante<br><em>Vivaldi</em></h1>
+        <p class="hero-lead">
+          Una mesa donde la tradición italiana se reinterpreta con precisión de autor:
+          pastas hechas a mano, aceites de prensa fría y una carta de vinos que
+          recorre la Toscana y el Piamonte.
+        </p>
+        <div class="hero-actions">
+          <a href="reservar.html" class="btn btn-solid">Reservar una mesa</a>
+          <a href="menu.html" class="btn btn-ghost">Ver el menú</a>
+        </div>
+      </div>
+
+      <!-- Solo decorativo; se oculta cuando hay foto de fondo. -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 480" class="olive-art">
+          <circle cx="210" cy="240" r="190" class="ring"></circle>
+          <path class="branch" d="M120 380 C 160 300, 150 200, 210 100 C 250 40, 300 20, 330 30"/>
+          <ellipse class="leaf" cx="170" cy="300" rx="22" ry="10" transform="rotate(-35 170 300)"/>
+          <ellipse class="leaf" cx="195" cy="255" rx="22" ry="10" transform="rotate(-20 195 255)"/>
+          <ellipse class="leaf" cx="210" cy="205" rx="22" ry="10" transform="rotate(-8 210 205)"/>
+          <ellipse class="leaf" cx="235" cy="150" rx="22" ry="10" transform="rotate(10 235 150)"/>
+          <ellipse class="leaf" cx="270" cy="95" rx="22" ry="10" transform="rotate(28 270 95)"/>
+          <circle class="olive" cx="150" cy="330" r="9"/>
+          <circle class="olive" cx="180" cy="270" r="9"/>
+          <circle class="olive" cx="260" cy="130" r="9"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIOS / UBICACIÓN (EDITAR con los datos reales) -->
+  <section class="info-strip" aria-label="Horarios y ubicación">
+    <div class="wrap info-inner">
+      <div class="info-item">
+        <span class="info-label">Horarios</span>
+        <p>Martes a domingo: 12:00 a 15:00 y 18:30 a 22:30</p>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Ubicación</span>
+        <p data-contact="address"></p>
+      </div>
+      <div class="info-item">
+        <span class="info-label">Reservaciones</span>
+        <p>Desde <a href="reservar.html">esta web</a> o por WhatsApp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 · PLATOS QUE DAN HAMBRE -->
+  <section class="home-section" id="platos">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Para empezar a imaginar la mesa</h2>
+        <p>Tres platos por los que nos conocen. La carta completa cambia con el mercado.</p>
+      </div>
+      <div class="home-cards">
+        <article class="home-card">
+          <div class="ph" data-photo-host><img data-photo src="img/menú/tagliatelle al ragu bolognese.jpg" alt="Tagliatelle al ragù bolognese servidas en plato hondo" width="640" height="800" loading="lazy"></div>
+          <p class="home-card-tag">Signature</p><h3>Tagliatelle al ragù bolognese</h3>
+          <p>Pasta laminada a mano cada mañana y un ragù de ocho horas.</p>
+          <span class="home-card-price">$14.00</span>
+        </article>
+        <article class="home-card">
+          <div class="ph" data-photo-host><img data-photo src="img/menú/Branzino entero, hinojo y cítricos.jpg" alt="Branzino entero al horno con hinojo y limón" width="640" height="800" loading="lazy"></div>
+          <h3>Branzino entero al horno</h3>
+          <p>Lubina mediterránea con hinojo, limón y aceite de oliva virgen extra.</p>
+          <span class="home-card-price">$26.00</span>
+        </article>
+        <article class="home-card">
+          <div class="ph" data-photo-host><img data-photo src="img/menú/tiramisu.jpg" alt="Tiramisú de la casa espolvoreado con cacao" width="640" height="800" loading="lazy"></div>
+          <h3>Tiramisú de la casa</h3>
+          <p>Mascarpone, café espresso recién extraído y cacao amargo.</p>
+          <span class="home-card-price">$7.50</span>
+        </article>
+      </div>
+      <p class="home-more"><a class="btn btn-ghost" href="menu.html">Ver el menú completo</a></p>
+    </div>
+  </section>
+
+  <!-- 2 · LA CASA / HISTORIA (con foto) -->
+  <section class="home-section home-section--tint" id="historia">
+    <div class="wrap home-story">
+      <!-- FOTO (reemplazar): img/inicio-historia.jpg — vertical 4:5, mín. 1000×1250. La cocina, el chef o el salón. -->
+      <div class="ph home-story-media" data-photo-host>
+        <img data-photo src="img/chef2.jpg" alt="La cocina de Restaurante Vivaldi" width="1000" height="1250" loading="lazy">
+      </div>
+      <div>
+        <blockquote class="pull-quote">
+          "En Vivaldi no seguimos recetas: interpretamos una partitura que cada
+          temporada se vuelve a escribir con el mercado del día."
+          <cite>— Chef Alessio Marino, cocina</cite>
+        </blockquote>
+        <!-- EDITAR: confirma que estas cifras son reales -->
+        <div class="stat-row">
+          <div class="stat"><span class="stat-number" data-years-since="1996">30</span><span class="stat-label">años de historia</span></div>
+          <div class="stat"><span class="stat-number">100%</span><span class="stat-label">pasta hecha a mano</span></div>
+          <div class="stat"><span class="stat-number">140</span><span class="stat-label">etiquetas en la cava</span></div>
+          <div class="stat"><span class="stat-number">4.9</span><span class="stat-label">calificación de huéspedes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · AMBIENTE (mosaico) -->
+  <section class="home-section" id="ambiente">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>El ambiente</h2>
+        <p>Un salón cálido pensado para cenas largas.</p>
+      </div>
+      <!-- FOTOS (reemplazar): img/ambiente-1.webp a ambiente-4.webp (las mismas de la galería de reseñas).
+           La primera se ve grande: usa una horizontal, mín. 1400×1000. Las otras, 800×600. -->
+      <div class="home-mosaic">
+        <figure class="ph" data-photo-host>
+          <img data-photo src="img/la sala.webp" alt="El salón principal del restaurante" width="800" height="600" loading="lazy">
+          <figcaption>La sala</figcaption>
+        </figure>
+        <figure class="ph" data-photo-host>
+          <img data-photo src="img/la cava.jpg" alt="La cava de vinos" width="800" height="600" loading="lazy">
+          <figcaption>La cava</figcaption>
+        </figure>
+        <figure class="ph" data-photo-host>
+          <img data-photo src="img/la cocina.webp" alt="La cocina y el trabajo del chef" width="800" height="600" loading="lazy">
+          <figcaption>La cocina</figcaption>
+        </figure>
+        <figure class="ph" data-photo-host>
+          <img data-photo src="img/platovertical.webp" alt="Detalle de una mesa servida" width="800" height="600" loading="lazy">
+          <figcaption>La mesa</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · RESEÑAS (EDITAR: ejemplos; deben ser iguales a las reales de resenas.html) -->
+  <section class="reviews home-reviews" id="resenas">
+    <div class="wrap reviews-inner">
+      <div class="rating-summary">
+        <span class="rating-number">4.9</span>
+        <div class="stars" role="img" aria-label="4.9 de 5 estrellas">★★★★★</div>
+        <p class="rating-count">312 reseñas verificadas</p>
+        <a class="btn btn-ghost" href="resenas.html">Leer todas las reseñas</a>
+      </div>
+      <div class="review-list">
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>El ragù de las tagliatelle merece el viaje por sí solo.
+            El servicio conoce cada plato de la carta y lo explica sin solemnidad.</blockquote>
+          <figcaption>Marcela H. — cena de aniversario</figcaption>
+        </figure>
+        <figure class="review">
+          <div class="stars" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>Reservamos para ocho personas y cada plato llegó a tiempo y en su punto.
+            La carta de vinos es honesta, no solo cara.</blockquote>
+          <figcaption>Roberto A. — cena de negocios</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · CÓMO LLEGAR (datos desde js/config.js) -->
+  <section class="home-section" id="llegar">
+    <div class="wrap home-map">
+      <div>
+        <h2>Cómo llegar</h2>
+        <p class="home-status" id="openStatus" hidden><span class="c-dot" aria-hidden="true"></span><span class="c-status-text"></span></p>
+        <p class="home-address" data-contact="address"></p>
+        <p>Martes a domingo<br>12:00 a 15:00 y 18:30 a 22:30</p>
+        <div class="home-links">
+          <a class="btn btn-solid" href="#" data-route hidden>Abrir en Google Maps</a>
+          <a class="btn btn-ghost" href="#" data-call hidden>Llamar</a>
+          <a class="btn btn-ghost" href="contacto.html">Más información</a>
+        </div>
+      </div>
+      <div class="ph has-placeholder home-map-frame" id="mapFrame"><p>El mapa aparecerá aquí</p></div>
+    </div>
+  </section>
+
+  <!-- 6 · CIERRE -->
+  <section class="home-cta">
+    <div class="wrap">
+      <h2>Tu mesa te está esperando</h2>
+      <p>Reserva en menos de un minuto.</p>
+      <a class="btn btn-gold" href="reservar.html">Reservar una mesa</a>
+    </div>
+  </section>
+
+</main>
+
+<div data-include="partials/footer.html"></div>
+
+<script src="js/include.js" defer></script>
+</body>
+</html>

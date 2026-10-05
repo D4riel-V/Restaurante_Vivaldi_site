@@ -1,0 +1,112 @@
+/* Vivaldi — reservas. Se carga DESPUÉS de style.css y usa sus variables. */
+
+.reserve-hero{ background: var(--forest); color: var(--ivory); padding: 3.5rem 0 3rem; }
+.reserve-hero .kicker{ color: var(--gold-light); }
+.reserve-hero h1{ color: var(--paper); font-size: clamp(2rem, 4.2vw, 3.2rem); line-height: 1.1; max-width: 20ch; }
+.reserve-hero p:last-child{ max-width: 52ch; margin: 0; color: rgba(242,236,221,.86); }
+
+.reserve-page{ background: var(--ivory); padding: 3rem 0 5rem; }
+.reserve-layout{ display: grid; grid-template-columns: minmax(0,1.3fr) minmax(0,.7fr); gap: 2.5rem; align-items: start; }
+
+.reserve-main .wizard-progress{ max-width: none; margin: 0 0 1.8rem; }
+.reserve-main .wizard{ max-width: none; margin: 0; border-top: 3px solid var(--gold); }
+.wizard-progress li.is-active span{ background: var(--gold); border-color: var(--gold); color: var(--forest-deep); }
+.wizard-progress li.is-done::before{ background: var(--gold); }
+
+/* atajos de fecha */
+.quick-dates{ display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.3rem; }
+.quick-dates button{
+  font: 500 .88rem var(--font-body); padding: .5rem 1.1rem; border-radius: 99px;
+  border: 1px solid rgba(23,23,15,.3); background: transparent; color: var(--ink); cursor: pointer;
+  transition: background-color .15s, border-color .15s;
+}
+.quick-dates button:hover:not(:disabled){ border-color: var(--forest); }
+.quick-dates button[aria-pressed="true"]{ background: var(--gold); border-color: var(--gold); color: var(--forest-deep); }
+.quick-dates button:disabled{ opacity: .4; cursor: not-allowed; text-decoration: line-through; }
+
+/* chips de hora y de personas: más contraste, selección dorada */
+.time-chip span{ border-color: rgba(23,23,15,.3); }
+.time-chip:hover input:not(:disabled) + span{ border-color: var(--forest); }
+.time-chip input:checked + span{ background: var(--gold); border-color: var(--gold); color: var(--forest-deep); font-weight: 600; }
+.people-grid{ grid-template-columns: repeat(5, 1fr); margin-bottom: 1.2rem; }
+.field-label{ margin: 0 0 .5rem; font-size: .88rem; }
+
+.busy-note{
+  margin: .9rem 0 0; padding: .65rem .9rem; font-size: .88rem;
+  border-left: 2px solid var(--gold); background: rgba(184,146,90,.14);
+}
+
+.wizard-nav .btn-gold{ background: var(--forest); border-color: var(--forest); color: var(--paper); }
+.wizard-nav .btn-gold:hover{ background: var(--forest-deep); }
+.wizard-nav .btn-gold:disabled{ opacity: .6; cursor: wait; }
+
+/* confianza */
+.reserve-trust{ list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; margin: 1.4rem 0 0; padding: 0; font-size: .86rem; color: var(--muted); }
+.reserve-trust li::before{ content: "✓"; color: var(--gold); margin-right: .4rem; font-weight: 700; }
+.reserve-trust a{ color: var(--wine); text-decoration: underline; }
+
+/* comanda en vivo */
+.ticket{ position: sticky; top: 96px; background: var(--forest-deep); color: var(--ivory); border-radius: var(--radius); overflow: hidden; }
+.ticket-media{ aspect-ratio: 16 / 9; background: var(--forest); }
+.ticket-media img{ width: 100%; height: 100%; object-fit: cover; }
+.ticket-media.no-photo{ display: none; }
+.ticket-body{ position: relative; padding: 1.5rem; }
+.ticket-title{ margin: 0 0 1.1rem; font: italic 400 1.1rem var(--font-display); color: var(--gold-light); }
+.ticket-stamp{
+  position: absolute; top: 1rem; right: 1.2rem; width: 4.8rem; height: 4.8rem; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--gold); color: var(--forest-deep); outline: 1px dashed var(--forest-deep); outline-offset: -5px;
+  transform: rotate(-8deg); font: 500 .66rem/1.1 var(--font-body);
+}
+.ticket-stamp b{ font: 500 1.7rem/1 var(--font-display); }
+.ticket-rows{ display: grid; grid-template-columns: auto 1fr; gap: .7rem 1rem; margin: 0; padding-top: 1.1rem; border-top: 1px dashed var(--line-on-dark); }
+.ticket-rows dt{ font-size: .85rem; color: rgba(242,236,221,.65); }
+.ticket-rows dd{ margin: 0; font: 500 1.05rem var(--font-display); color: var(--paper); text-transform: capitalize; overflow-wrap: anywhere; }
+.ticket-rows dd.is-empty{ font-style: italic; font-weight: 400; color: rgba(242,236,221,.45); }
+.ticket-foot{ margin: 1.3rem 0 0; padding-top: 1rem; border-top: 1px dashed var(--line-on-dark); font-size: .82rem; color: rgba(242,236,221,.7); }
+.ticket.is-confirmed .ticket-title::after{ content: " · confirmada"; }
+
+/* éxito */
+.reserve-success{ background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--gold); padding: 3rem 2rem; text-align: center; }
+.reserve-success:focus{ outline: none; }
+.check{ width: 84px; height: 84px; margin: 0 auto 1.2rem; }
+.check circle{ fill: none; stroke: var(--gold); stroke-width: 2; stroke-dasharray: 252; stroke-dashoffset: 252; animation: draw .7s ease forwards; }
+.check path{ fill: none; stroke: var(--forest); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 50; stroke-dashoffset: 50; animation: draw .5s .6s ease forwards; }
+@keyframes draw{ to{ stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce){ .check circle, .check path{ stroke-dashoffset: 0; } }
+.reserve-success h2{ font-size: 1.8rem; }
+.demo-note{ padding: .7rem 1rem; background: rgba(107,35,51,.08); color: var(--wine); font-size: .88rem; }
+.success-actions{ display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1.4rem; }
+
+@media (max-width: 960px){
+  .reserve-layout{ grid-template-columns: 1fr; }
+  .ticket{ position: static; }
+  .ticket-media{ display: none; }
+}
+@media (max-width: 600px){
+  .reserve-hero{ padding: 2.6rem 0 2.2rem; }
+  .reserve-page{ padding: 2rem 0 3.5rem; }
+  .reserve-success{ padding: 2.2rem 1.2rem; }
+}
+
+/* ---------- corrección responsive ----------
+   Los elementos de una cuadrícula (grid) y los <fieldset> tienen un ancho mínimo
+   igual a su contenido. Como el asistente mete 4 pasos en fila, el contenido medía
+   "4 pantallas" y ensanchaba toda la página en el móvil. Con min-width:0 el ancho
+   queda limitado al de la pantalla. */
+.reserve-layout{ grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); }
+.reserve-layout > *{ min-width: 0; }
+.reserve-main, .wizard, .wizard-viewport, .wizard-track{ min-width: 0; max-width: 100%; }
+.wizard-step{ min-width: 0; }
+.reserve-page{ overflow-x: clip; }
+
+@media (max-width: 960px){
+  .reserve-layout{ grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 420px){
+  .wizard-nav .btn{ min-width: 0; padding-left: 1.2rem; padding-right: 1.2rem; }
+  .wizard-progress li{ font-size: .7rem; }
+  .quick-dates button{ padding: .45rem .85rem; }
+  .ticket-body{ padding: 1.2rem; }
+  .ticket-stamp{ width: 4.2rem; height: 4.2rem; right: .9rem; }
+}

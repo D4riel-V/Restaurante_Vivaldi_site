@@ -1,0 +1,98 @@
+/* Vivaldi — inicio. Se carga DESPUÉS de style.css y usa sus variables. */
+
+.hero{ position: relative; overflow: hidden; display: flex; align-items: center; min-height: min(82vh, 760px); }
+.hero-media{ position: absolute; inset: 0; }
+.hero-media img{ width: 100%; height: 100%; object-fit: cover; }
+/* velo más oscuro a la izquierda, donde va el texto */
+.hero-media::after{
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(18,38,28,.92) 0%, rgba(18,38,28,.7) 45%, rgba(18,38,28,.35) 100%),
+              linear-gradient(180deg, rgba(18,38,28,.3), rgba(18,38,28,.6));
+}
+.hero-media.no-photo{ display: none; }
+.hero .hero-inner{ position: relative; z-index: 1; width: 100%; }
+
+/* con foto: el texto ocupa la izquierda y la rama de olivo desaparece */
+.hero-media:not(.no-photo) ~ .hero-inner{ grid-template-columns: 1fr; }
+.hero-media:not(.no-photo) ~ .hero-inner .hero-art{ display: none; }
+.hero-media:not(.no-photo) ~ .hero-inner .hero-text{ max-width: 640px; }
+
+@media (max-width: 960px){
+  .hero{ min-height: 0; }
+  .hero-media::after{ background: linear-gradient(180deg, rgba(18,38,28,.78), rgba(18,38,28,.9)); }
+}
+
+/* ---------- secciones del inicio ---------- */
+.home-section{ padding: 5.5rem 0; }
+.home-section--tint{ background: var(--ivory); }
+.home-section .section-head h2{ font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
+
+/* bloque de foto (con respaldo verde y anillo dorado si la foto aún no existe) */
+.ph{ position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(160deg, var(--forest), var(--forest-deep)); }
+.ph img{ width: 100%; height: 100%; object-fit: cover; }
+.ph.no-photo::before, .ph.has-placeholder::before{
+  content: ""; position: absolute; left: 50%; top: 50%; width: 38%; aspect-ratio: 1;
+  transform: translate(-50%, -50%); border: 1px solid var(--gold); border-radius: 50%; opacity: .5;
+}
+.ph.has-map::before{ display: none; }
+.ph iframe{ width: 100%; height: 100%; border: 0; }
+.ph.has-placeholder p{ position: absolute; inset: auto 0 1.2rem; margin: 0; text-align: center; font: italic 400 .95rem var(--font-display); color: var(--gold-light); }
+
+/* 1 · tarjetas de platos */
+.home-cards{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.home-card .ph{ aspect-ratio: 4 / 5; margin-bottom: 1rem; }
+.home-card .ph img{ transition: transform .6s ease; }
+.home-card:hover .ph img{ transform: scale(1.05); }
+.home-card-tag{ margin: 0 0 .2rem; font: italic 400 .95rem var(--font-display); color: var(--wine); }
+.home-card h3{ font-size: 1.3rem; margin-bottom: .3rem; }
+.home-card p:not(.home-card-tag){ margin: 0 0 .5rem; font-size: .93rem; color: var(--muted); }
+.home-card-price{ font: 500 1.1rem var(--font-display); color: var(--forest); }
+.home-more{ margin: 3rem 0 0; text-align: center; }
+
+/* 2 · historia */
+.home-story{ display: grid; grid-template-columns: .85fr 1.15fr; gap: 4.5rem; align-items: center; }
+.home-story-media{ aspect-ratio: 4 / 5; }
+
+/* 3 · mosaico */
+.home-mosaic{ display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; gap: 1rem; }
+.home-mosaic figure{ margin: 0; }
+.home-mosaic figure:first-child{ grid-column: span 2; grid-row: span 2; }
+.home-mosaic figcaption{
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .8rem;
+  font: italic 400 1rem var(--font-display); color: var(--paper);
+  background: linear-gradient(transparent, rgba(18,38,28,.78));
+}
+
+/* 4 · reseñas */
+.home-reviews{ background: var(--ivory); }
+.home-reviews .rating-count{ margin-bottom: 1.4rem; }
+
+/* 5 · cómo llegar */
+.home-map{ display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; align-items: center; }
+.home-map h2{ font-size: clamp(1.9rem, 3.6vw, 2.8rem); }
+.home-address{ font: italic 400 1.15rem var(--font-display); color: var(--wine); margin-bottom: .6rem; }
+.home-links{ display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.5rem; }
+.home-map-frame{ aspect-ratio: 4 / 3; }
+.home-status{ display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1rem; padding: .4rem 1rem; border: 1px solid var(--line); border-radius: 99px; font-size: .88rem; }
+.c-dot{ width: .6rem; height: .6rem; border-radius: 50%; background: var(--gold); }
+.home-status.is-open .c-dot{ background: #3f8f56; animation: home-pulse 2s infinite; }
+@keyframes home-pulse{ 0%{ box-shadow: 0 0 0 0 rgba(63,143,86,.5); } 100%{ box-shadow: 0 0 0 8px rgba(63,143,86,0); } }
+
+/* 6 · cierre */
+.home-cta{ background: var(--forest); color: var(--ivory); padding: 5rem 0; text-align: center; }
+.home-cta h2{ color: var(--paper); font-size: clamp(2rem, 4vw, 3rem); }
+.home-cta p{ color: rgba(242,236,221,.82); margin-bottom: 1.6rem; }
+
+@media (max-width: 960px){
+  .home-section{ padding: 4rem 0; }
+  .home-story, .home-map{ grid-template-columns: 1fr; gap: 2.2rem; }
+  .home-story-media{ aspect-ratio: 4 / 3; }
+  .home-cards{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px){
+  .home-section{ padding: 3.2rem 0; }
+  .home-cards{ grid-template-columns: 1fr; }
+  .home-mosaic{ grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+  .home-mosaic figure:first-child{ grid-column: span 2; grid-row: span 1; }
+  .home-cta{ padding: 3.8rem 0; }
+}
